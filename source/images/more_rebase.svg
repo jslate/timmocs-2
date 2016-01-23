@@ -884,7 +884,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.42362773"
-     inkscape:cx="179.62036"
+     inkscape:cx="-165.02186"
      inkscape:cy="176.39303"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -900,12 +900,7 @@
      fit-margin-right="20"
      fit-margin-bottom="20"
      showguides="true"
-     inkscape:guide-bbox="true">
-    <sodipodi:guide
-       position="576.21162,228.58356"
-       orientation="0,1"
-       id="guide22505" />
-  </sodipodi:namedview>
+     inkscape:guide-bbox="true" />
   <metadata
      id="metadata7">
     <rdf:RDF>

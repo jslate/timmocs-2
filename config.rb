@@ -1,11 +1,29 @@
 PAGES = %w(
   index
   timmocs_are_not_people
+  ved
   individuals
+  generations
+  what_is_branch
+  what_is_branch_2
+  merging
+  two_parents
+  individual
+  individual_2
+  conflict_question
+  cherry_pick_pre
+  cherry_pick
+  note_applied
+  cherry_pick_skip
+  no_hair
+  rebase
+  rebase_2
+  rebase_diffs
   more_rebase
   rebase_re_apply
   rebase_really
   rebased
+  thats_all
 )
 
 helpers do
