@@ -1,25 +1,43 @@
 PAGES = %w(
   index
   timmocs_are_not_people
+  timmocs_are_not_people_2
+  adamant
   ved
-  individuals
   generations
+  branch_pointers
+  branch_pointers_2
+  branch_pointers_head
+  branch_pointers_head_2
   what_is_branch
   what_is_branch_2
+  branch_moved_forward
+  branch
+  branch_2
+  branch_update_point
+  branch_update_point_2
+  branch_update_point_3
+  branch_update_point_4
   merging
   two_parents
   individual
   individual_2
   conflict_question
+  ved_intervene
   cherry_pick_pre
+  cherry_pick_pre_2
   cherry_pick
+  cherry_pick_2
   note_applied
   cherry_pick_skip
+  cherry_pick_skip_2
   no_hair
   rebase
   rebase_2
   rebase_diffs
   more_rebase
+  more_rebase_2
+  more_rebase_3
   rebase_re_apply
   rebase_really
   rebased
