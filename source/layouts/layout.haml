@@ -1,0 +1,17 @@
+!!! 5
+
+%head
+  %title Timmocs 2
+  = stylesheet_link_tag "normalize", "all"
+  = javascript_include_tag  "all"
+
+%body
+  .nav-container
+    .nav
+      = previous_page
+
+      = next_page
+
+  = yield
+
+

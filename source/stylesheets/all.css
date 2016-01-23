@@ -1,0 +1,52 @@
+img {
+  width: 100%;
+}
+
+p {
+  font-size: 1.5em;
+  text-align: center;
+  padding: 0 2em 0 2em;
+}
+
+.nav-container {
+  margin-top: 1em;
+  width: 100%;
+  text-align: center;
+}
+.nav {
+  width: 90%;
+  display: inline-block;
+  text-align: left;
+}
+
+.button {
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.5),0 1px 2px rgba(0,0,0,.15);
+    background-color: #EEE;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiP…dpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==);
+    background: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0%,#fbfbfb),color-stop(100%,#e1e1e1));
+    background: -webkit-linear-gradient(top,#fbfbfb,#e1e1e1);
+    background: linear-gradient(to bottom,#fbfbfb,#e1e1e1);
+    display: inline-block;
+    vertical-align: middle;
+    border: 1px solid #d4d4d4;
+    height: 32px;
+    line-height: 30px;
+    padding: 0 25.6px;
+    font-weight: 300;
+    font-size: 16px;
+    font-family: "Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+    color: #666;
+    text-shadow: 0 1px 1px #fff;
+    margin: 0;
+    text-decoration: none;
+    text-align: center;
+}
+
+.button.next {
+  float: right;
+}
+
+.button a {
+  color: #000;
+  text-decoration: none;
+}
