@@ -27,10 +27,8 @@ PAGES = %w(
   cherry_pick_pre
   cherry_pick_pre_2
   cherry_pick
-  cherry_pick_2
   note_applied
   cherry_pick_skip
-  cherry_pick_skip_2
   no_hair
   rebase
   rebase_2
@@ -51,7 +49,7 @@ helpers do
   def previous_page
     current_index.try do |i|
       if i > 0
-        link_to "#{PAGES[i-1]}.html" do
+        content_tag :a, href: "#{PAGES[i-1]}.html" do
           content_tag 'div', '&lt; previous', class: 'button'
         end
       end
@@ -60,7 +58,7 @@ helpers do
   def next_page
     current_index.try do |i|
       PAGES[i+1].try do |page|
-        link_to "#{page}.html" do
+        content_tag :a, href: "#{page}.html" do
           content_tag 'div', 'next &gt;', class: 'button next'
         end
       end
