@@ -9,7 +9,7 @@ p {
 }
 
 .nav-container {
-  margin-top: 1em;
+  margin: 1em 0 1em 0;
   width: 100%;
   text-align: center;
 }
@@ -49,4 +49,14 @@ p {
 .button a {
   color: #000;
   text-decoration: none;
+}
+
+#code-container {
+  margin: 40px 20px;
+  opacity: 0.1;
+}
+
+#code-container .highlight {
+  padding: 10px;
+  background-color: #dadada;
 }

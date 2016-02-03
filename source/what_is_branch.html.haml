@@ -1,3 +1,21 @@
 %img{ src: 'images/what_is_branch.svg' }
 
 = text 'When a new branch is created it just points to the commit HEAD points to.'
+
+#code-container
+  :code
+    # lang: shell
+      [master]: git branch sad
+
+      [master]: git log --oneline --decorate
+      f0c4c4d (HEAD -> master, sad) add mouth
+      a46f7a4 add nose
+      141170e initial commit
+
+      [master]: git checkout sad
+      Switched to branch 'sad'
+
+      [sad]: git log --oneline --decorate
+      f0c4c4d (HEAD -> sad, master) add mouth
+      a46f7a4 add nose
+      141170e initial commit

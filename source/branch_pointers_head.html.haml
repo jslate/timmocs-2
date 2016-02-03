@@ -1,3 +1,14 @@
 %img{ src: 'images/branch_pointers_head.svg' }
 
 = text 'There is also a special pointer called HEAD which points to the one of the branch pointers.'
+
+#code-container
+  :code
+    # lang: shell
+      [sad]: git checkout master
+      Switched to branch 'master'
+
+      [master]: git log --oneline --decorate
+      f0c4c4d (HEAD -> master) add mouth
+      a46f7a4 add nose
+      141170e initial commit

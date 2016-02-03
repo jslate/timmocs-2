@@ -1,3 +1,21 @@
 %img{ src: 'images/branch_update_point.svg' }
 
 = text 'In the case above, Ved updates the original branch to point to the timmoc on the branch with the new features.'
+
+
+#code-container
+  :code
+    # lang: ruby
+      [happy]: git log --oneline --decorate
+      b5deeb2 (HEAD -> happy) add mouth
+      fb782c2 add nose
+      5597585 (master) initial commit
+
+      [happy]: git checkout master
+      Switched to branch 'master'
+
+      [master]: git merge happy
+      Updating 5597585..b5deeb2
+      Fast-forward
+       foobar.txt | 2 ++
+       1 file changed, 2 insertions(+)

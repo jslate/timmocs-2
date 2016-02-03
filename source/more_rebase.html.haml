@@ -1,3 +1,33 @@
 %img{ src: 'images/more_rebase.svg' }
 
 = text 'Then Ved re-applies those changes to the most recent timmoc on the original branch.'
+
+#code-container
+  :code
+    # lang: shell
+      [hair]: git log --oneline --decorate
+      5d798bc (HEAD -> hair) add beard
+      8124b77 add hair
+      80f2adf (master) initial commit
+
+      [hair]: git rebase horns
+      First, rewinding head to replay your work on top of it...
+      Applying: add hair
+      Applying: add beard
+
+      [hair]: git log --oneline --decorate
+      b25d0ac (HEAD -> hair) add beard
+      9165e40 add hair
+      7e15edf (horns) add the other horn
+      25c0260 add one horn
+      80f2adf (master) initial commit
+
+      [hair]: git checkout horns
+      Switched to branch 'horns'
+
+      [horns]: git merge hair
+      Updating 7e15edf..b25d0ac
+      Fast-forward
+       barfoo.txt | 4 ++++
+       1 file changed, 4 insertions(+)
+       create mode 100644 barfoo.txt
