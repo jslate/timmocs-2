@@ -53,10 +53,20 @@ p {
 
 #code-container {
   margin: 40px 20px;
+  line-height: 1.5em;
   opacity: 0.1;
+  background-color: #dadada;
+  padding: 10px;
 }
 
 #code-container .highlight {
   padding: 10px;
-  background-color: #dadada;
+}
+
+.branch {
+  color: #0000ff;
+}
+
+.hash {
+  color: #00aa00;
 }

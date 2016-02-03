@@ -67,6 +67,23 @@ helpers do
   def text(string)
     content_tag 'p', string.gsub(/(\S*)\s(\S*)\./, '\1&nbsp;\2.')
   end
+
+  def cmd(string)
+    string.gsub(/(\[\w+\]:) (.*)/, '<div><span class="branch">\1</span> \2</div>' + "\n")
+  end
+
+  def diff_line(string)
+    if string =~ /->/
+      string.gsub(/(\w{7}) \((\w+) -> ([\w,\s]+)\) (.*)/, '<div><span class="hash">\1</span> (<span class="branch">\2</span> -> <span class="branch">\3</span>) \4')
+    else
+      string.gsub(/(\w{7}) (.*)/, '<div><span class="hash">\1</span> \2')
+    end
+  end
+
+  def commit_line(string)
+    string.gsub(/commit (\w{40})/, '<div>commit <span class="hash">\1</span></div>')
+  end
+
 end
 
 set :css_dir, 'stylesheets'

@@ -4,18 +4,16 @@
 
 
 #code-container
-  :code
-    # lang: ruby
-      [happy]: git log --oneline --decorate
-      b5deeb2 (HEAD -> happy) add mouth
-      fb782c2 add nose
-      5597585 (master) initial commit
-
-      [happy]: git checkout master
-      Switched to branch 'master'
-
-      [master]: git merge happy
-      Updating 5597585..b5deeb2
-      Fast-forward
-       foobar.txt | 2 ++
-       1 file changed, 2 insertions(+)
+  = cmd '[happy]: git log --oneline --decorate'
+  = diff_line 'b5deeb2 (HEAD -> happy) add mouth'
+  = diff_line 'fb782c2 add nose'
+  = diff_line '5597585 (master) initial commit'
+  %div &nbsp;
+  = cmd '[happy]: git checkout master'
+  %div Switched to branch 'master'
+  %div &nbsp;
+  = cmd '[master]: git merge happy'
+  %div Updating 5597585..b5deeb2
+  %div Fast-forward
+  %div &nbsp;foobar.txt | 2 ++
+  %div &nbsp;1 file changed, 2 insertions(+)

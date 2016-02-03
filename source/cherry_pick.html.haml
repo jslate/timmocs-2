@@ -3,26 +3,24 @@
 = text 'The difference between timmocs on the hairy branch are calculated, and then new timmocs are created with those changes applied.'
 
 #code-container
-  :code
-    # lang: shell
-      [horns]: git log hair --oneline --decorate
-      226d4a6 (hair) add beard
-      872eb4d add hair
-      769dc9b (master) initial commit
-
-      [horns]: git cherry-pick 872eb4d
-      [horns 3856523] add hair
-       Date: Wed Feb 3 09:30:27 2016 -0500
-       1 file changed, 1 insertion(+)
-
-      [horns]: git cherry-pick 226d4a6
-      [horns d215595] add beard
-       Date: Wed Feb 3 09:30:42 2016 -0500
-       1 file changed, 1 insertion(+)
-
-      [horns]: git log --oneline --decorate
-      d215595 (HEAD -> horns) add beard
-      3856523 add hair
-      95d1d5d add the other horn
-      4491e69 add one horn
-      769dc9b (master) initial commit
+  = cmd '[horns]: git log hair --oneline --decorate'
+  = diff_line '226d4a6 (hair) add beard'
+  = diff_line '872eb4d add hair'
+  = diff_line '769dc9b (master) initial commit'
+  %div &nbsp;
+  = cmd '[horns]: git cherry-pick 872eb4d'
+  %div [horns 3856523] add hair
+  %div &nbsp;Date: Wed Feb 3 09:30:27 2016 -0500
+  %div &nbsp;1 file changed, 1 insertion(+)
+  %div &nbsp;
+  = cmd '[horns]: git cherry-pick 226d4a6'
+  %div [horns d215595] add beard
+  %div &nbsp;Date: Wed Feb 3 09:30:42 2016 -0500
+  %div &nbsp;1 file changed, 1 insertion(+)
+  %div &nbsp;
+  = cmd '[horns]: git log --oneline --decorate'
+  = diff_line 'd215595 (HEAD -> horns) add beard'
+  = diff_line '3856523 add hair'
+  = diff_line '95d1d5d add the other horn'
+  = diff_line '4491e69 add one horn'
+  = diff_line '769dc9b (master) initial commit'

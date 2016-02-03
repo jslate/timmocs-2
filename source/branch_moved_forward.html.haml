@@ -3,9 +3,7 @@
 = text 'As new timmocs are created on a branch, the pointer just moves forward.'
 
 #code-container
-  :code
-    # lang: shell
-      [sad]: git log --oneline --decorate
-      9f7cad2 (HEAD -> sad) add sad mouth
-      ff4d610 add nose
-      141170e initial commit
+  = cmd '[sad]: git log --oneline --decorate'
+  = diff_line '9f7cad2 (HEAD -> sad) add sad mouth'
+  = diff_line 'ff4d610 add nose'
+  = diff_line '141170e initial commit'

@@ -3,31 +3,29 @@
 = text 'Then Ved re-applies those changes to the most recent timmoc on the original branch.'
 
 #code-container
-  :code
-    # lang: shell
-      [hair]: git log --oneline --decorate
-      5d798bc (HEAD -> hair) add beard
-      8124b77 add hair
-      80f2adf (master) initial commit
-
-      [hair]: git rebase horns
-      First, rewinding head to replay your work on top of it...
-      Applying: add hair
-      Applying: add beard
-
-      [hair]: git log --oneline --decorate
-      b25d0ac (HEAD -> hair) add beard
-      9165e40 add hair
-      7e15edf (horns) add the other horn
-      25c0260 add one horn
-      80f2adf (master) initial commit
-
-      [hair]: git checkout horns
-      Switched to branch 'horns'
-
-      [horns]: git merge hair
-      Updating 7e15edf..b25d0ac
-      Fast-forward
-       barfoo.txt | 4 ++++
-       1 file changed, 4 insertions(+)
-       create mode 100644 barfoo.txt
+  = cmd '[hair]: git log --oneline --decorate'
+  = diff_line '5d798bc (HEAD -> hair) add beard'
+  = diff_line '8124b77 add hair'
+  = diff_line '80f2adf (master) initial commit'
+  %div &nbsp;
+  = cmd '[hair]: git rebase horns'
+  %div First, rewinding head to replay your work on top of it...
+  %div Applying: add hair
+  %div Applying: add beard
+  %div &nbsp;
+  = cmd '[hair]: git log --oneline --decorate'
+  = diff_line 'b25d0ac (HEAD -> hair) add beard'
+  = diff_line '9165e40 add hair'
+  = diff_line '7e15edf (horns) add the other horn'
+  = diff_line '25c0260 add one horn'
+  = diff_line '80f2adf (master) initial commit'
+  %div &nbsp;
+  = cmd '[hair]: git checkout horns'
+  %div Switched to branch 'horns'
+  %div &nbsp;
+  = cmd '[horns]: git merge hair'
+  %div Updating 7e15edf..b25d0ac
+  %div Fast-forward
+  %div &nbsp;barfoo.txt | 4 ++++
+  %div &nbsp;1 file changed, 4 insertions(+)
+  %div &nbsp;create mode 100644 barfoo.txt

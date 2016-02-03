@@ -3,14 +3,12 @@
 = text 'One timmoc can have more than one child timmmoc. When this happens, we get a new branch on the family tree.'
 
 #code-container
-  :code
-    # lang: shell
-      [sad]: git log --oneline --decorate
-      c904622 (HEAD -> sad) add sad mouth
-      b687b7e add nose
-      141170e initial commit
-
-      [sad]: git log master --oneline --decorate
-      f0c4c4d (master) add mouth
-      a46f7a4 add nose
-      141170e (HEAD -> sad) initial commit
+  = cmd '[sad]: git log --oneline --decorate'
+  = diff_line 'c904622 (HEAD -> sad) add sad mouth'
+  = diff_line 'b687b7e add nose'
+  = diff_line '141170e initial commit'
+  %div &nbsp;
+  = cmd '[sad]: git log master --oneline --decorate'
+  = diff_line 'f0c4c4d (master) add mouth'
+  = diff_line 'a46f7a4 add nose'
+  = diff_line '141170e (HEAD -> sad) initial commit'

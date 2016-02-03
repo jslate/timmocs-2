@@ -3,15 +3,12 @@
 = text 'When Ved is done, it really looks like there was only one branch.'
 
 #code-container
-  :code
-    # lang: shell
-
-      [horns]: git branch -d hair
-      Deleted branch hair (was b25d0ac).
-
-      [horns]: git log --oneline --decorate
-      b25d0ac (HEAD -> horns) add beard
-      9165e40 add hair
-      7e15edf add the other horn
-      25c0260 add one horn
-      80f2adf (master) initial commit
+  = cmd '[horns]: git branch -d hair'
+  %div Deleted branch hair (was b25d0ac).
+  %div &nbsp;
+  = cmd '[horns]: git log --oneline --decorate'
+  = diff_line 'b25d0ac (HEAD -> horns) add beard'
+  = diff_line '9165e40 add hair'
+  = diff_line '7e15edf add the other horn'
+  = diff_line '25c0260 add one horn'
+  = diff_line '80f2adf (master) initial commit'

@@ -3,10 +3,8 @@
 = text 'Over many generations, Ved can decide to add and remove various features.'
 
 #code-container
-  :code
-    # lang: shell
 
-      [master]: git log --oneline --decorate
-      f0c4c4d (HEAD -> master) add mouth
-      a46f7a4 add nose
-      141170e initial commit
+  = cmd '[master]: git log --oneline --decorate'
+  = diff_line 'f0c4c4d (HEAD -> master) add mouth'
+  = diff_line 'a46f7a4 add nose'
+  = diff_line '141170e initial commit'
