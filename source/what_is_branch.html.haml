@@ -4,12 +4,12 @@
 
 #code-container
   = cmd '[master]: git branch sad'
-  %div &nbsp;
+  
   = cmd '[master]: git log --oneline --decorate'
   = diff_line '141170e (HEAD -> master, sad) initial commit'
-  %div &nbsp;
+  
   = cmd '[master]: git checkout sad'
   %div Switched to branch 'sad'
-  %div &nbsp;
+  
   = cmd '[sad]: git log --oneline --decorate'
   = diff_line '141170e (HEAD -> sad, master) initial commit'

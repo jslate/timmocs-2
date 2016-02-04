@@ -69,7 +69,7 @@ helpers do
   end
 
   def cmd(string)
-    string.gsub(/(\[\w+\]:) (.*)/, '<div><span class="branch">\1</span> \2</div>' + "\n")
+    string.gsub(/(\[\w+\]:) (.*)/, '<div class="cmd"><span class="branch">\1</span> \2</div>' + "\n")
   end
 
   def diff_line(string)
