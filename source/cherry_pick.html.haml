@@ -4,9 +4,9 @@
 
 #code-container
   = cmd '[horns]: git log hair --oneline --decorate'
-  = diff_line '226d4a6 (hair) add beard'
-  = diff_line '872eb4d add hair'
-  = diff_line '769dc9b (master) initial commit'
+  = commit_line '226d4a6 (hair) add beard'
+  = commit_line '872eb4d add hair'
+  = commit_line '769dc9b (master) initial commit'
   
   = cmd '[horns]: git cherry-pick 872eb4d'
   %div [horns 3856523] add hair
@@ -19,8 +19,8 @@
   1 file changed, 1 insertion(+)
   
   = cmd '[horns]: git log --oneline --decorate'
-  = diff_line 'd215595 (HEAD -> horns) add beard'
-  = diff_line '3856523 add hair'
-  = diff_line '95d1d5d add the other horn'
-  = diff_line '4491e69 add one horn'
-  = diff_line '769dc9b (master) initial commit'
+  = commit_line 'd215595 (HEAD -> horns) add beard'
+  = commit_line '3856523 add hair'
+  = commit_line '95d1d5d add the other horn'
+  = commit_line '4491e69 add one horn'
+  = commit_line '769dc9b (master) initial commit'

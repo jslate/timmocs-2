@@ -72,16 +72,14 @@ helpers do
     string.gsub(/(\[\w+\]:) (.*)/, '<div class="cmd"><span class="branch">\1</span> \2</div>' + "\n")
   end
 
-  def diff_line(string)
-    if string =~ /->/
+  def commit_line(string)
+    if string =~ /commit (\w{40})/
+      string.gsub(/commit (\w{40})/, '<div>commit <span class="hash">\1</span></div>')
+    elsif string =~ /->/
       string.gsub(/(\w{7}) \((\w+) -> ([\w,\s]+)\) (.*)/, '<div><span class="hash">\1</span> (<span class="branch">\2</span> -> <span class="branch">\3</span>) \4')
     else
       string.gsub(/(\w{7}) (.*)/, '<div><span class="hash">\1</span> \2')
     end
-  end
-
-  def commit_line(string)
-    string.gsub(/commit (\w{40})/, '<div>commit <span class="hash">\1</span></div>')
   end
 
 end
@@ -91,8 +89,6 @@ set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
-
-activate :syntax
 
 # Build-specific configuration
 configure :build do

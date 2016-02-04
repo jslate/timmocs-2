@@ -4,9 +4,9 @@
 
 #code-container
   = cmd '[hair]: git log --oneline --decorate'
-  = diff_line '5d798bc (HEAD -> hair) add beard'
-  = diff_line '8124b77 add hair'
-  = diff_line '80f2adf (master) initial commit'
+  = commit_line '5d798bc (HEAD -> hair) add beard'
+  = commit_line '8124b77 add hair'
+  = commit_line '80f2adf (master) initial commit'
   
   = cmd '[hair]: git rebase horns'
   %div First, rewinding head to replay your work on top of it...
@@ -14,11 +14,11 @@
   %div Applying: add beard
   
   = cmd '[hair]: git log --oneline --decorate'
-  = diff_line 'b25d0ac (HEAD -> hair) add beard'
-  = diff_line '9165e40 add hair'
-  = diff_line '7e15edf (horns) add the other horn'
-  = diff_line '25c0260 add one horn'
-  = diff_line '80f2adf (master) initial commit'
+  = commit_line 'b25d0ac (HEAD -> hair) add beard'
+  = commit_line '9165e40 add hair'
+  = commit_line '7e15edf (horns) add the other horn'
+  = commit_line '25c0260 add one horn'
+  = commit_line '80f2adf (master) initial commit'
   
   = cmd '[hair]: git checkout horns'
   %div Switched to branch 'horns'

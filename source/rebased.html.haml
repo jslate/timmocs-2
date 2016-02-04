@@ -5,10 +5,10 @@
 #code-container
   = cmd '[horns]: git branch -d hair'
   %div Deleted branch hair (was b25d0ac).
-  
+
   = cmd '[horns]: git log --oneline --decorate'
-  = diff_line 'b25d0ac (HEAD -> horns) add beard'
-  = diff_line '9165e40 add hair'
-  = diff_line '7e15edf add the other horn'
-  = diff_line '25c0260 add one horn'
-  = diff_line '80f2adf (master) initial commit'
+  = commit_line 'b25d0ac (HEAD -> horns) add beard'
+  = commit_line '9165e40 add hair'
+  = commit_line '7e15edf add the other horn'
+  = commit_line '25c0260 add one horn'
+  = commit_line '80f2adf (master) initial commit'
