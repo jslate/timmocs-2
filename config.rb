@@ -49,7 +49,7 @@ helpers do
   def previous_page
     current_index.try do |i|
       if i > 0
-        content_tag :a, href: "#{PAGES[i-1]}.html" do
+        content_tag :a, href: "#{PAGES[i-1]}.html", id: 'previous_link' do
           content_tag 'div', '&lt; previous', class: 'button'
         end
       end
@@ -58,7 +58,7 @@ helpers do
   def next_page
     current_index.try do |i|
       PAGES[i+1].try do |page|
-        content_tag :a, href: "#{page}.html" do
+        content_tag :a, href: "#{page}.html", id: 'next_link' do
           content_tag 'div', 'next &gt;', class: 'button next'
         end
       end
