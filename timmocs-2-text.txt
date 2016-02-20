@@ -1,0 +1,104 @@
+This is a timmoc.
+- git: show initial commit
+
+Timmocs aren't like people. Usually it only takes one timmoc to make a child timmoc.
+- git: show add code
+
+But timmocs are like people in that they are all unique individuals.
+
+Each timmoc is a complete timmoc in its own right. They are quite adamant about this.
+
+The timmocs have a lazy and ruthless god named Ved. Ved doesn't want to do any extra work and also kills timmocs with reckless abandon.
+
+Over many generations, Ved can decide to add and remove various features.
+- git: show nose and mouth
+
+One timmoc can have more than one child timmmoc. When this happens, we get a new branch on the family tree.
+- git: show two branches
+
+But what is a branch? Really it is just a pointer to a single timmoc.
+
+There is also a special pointer called HEAD which points to the one of the branch pointers.
+- git: show checkout / move head
+
+HEAD is the branch on which Ved is currently changing features.
+
+When a new branch is created it just points to the commit HEAD points to.
+- git: show brand new branch creation
+
+Usually, HEAD is moved to the new branch as well, so Ved can make changes on that branch.
+
+As new timmocs are created on a branch, the pointer just moves forward.
+- git: show nose and sad mouth added
+
+Let's say Ved makes some changes on a branch called Happy.
+
+Later, Ved might want to include those changes on the Master branch.
+
+In the case above, Ved updates the original branch to point to the timmoc on the branch with the new features.
+- git: show ff merge
+
+It is important to note that no new timmoc is created here!
+
+Both branches now just point to the same timmoc.
+
+However, this can only work when there aren't any changes in the other branch.
+
+Often features from more than one generation have to be combined.
+
+When two branches are merged, that means you have a timmoc with two parents.
+- git: show recursive merge
+
+But even a timmoc with two parents is a unique individual!
+
+Really! Go back and look, no timmoc before this one looked just like this.
+
+Sometimes two branches need to be merged together, but the features of the parents conflict.
+
+If there is a conlict between features, Ved must come in to resolve them.
+
+Sometimes Ved wants to pick timmocs from one branch and put them into another branch.
+
+Here Ved wants to apply the hair and beard to the timmoc with horns.
+
+The difference between timmocs on the hairy branch are calculated, and then new timmocs are created with those changes applied.
+- git: cherry-pick
+
+ADD Each time Ved re-applies a change, that makes an entirely new timmoc!
+
+ADD Really! Look at the second to last timmoc. No timmoc before it looked like that.
+
+Note, however, that only the changes from the timmocs Ved specifies are applied.
+
+Here Ved only picks the timmoc with the beard to apply.
+
+So the new timmoc that is created only has the beard, and no hair on top!
+
+Sometimes history can look a bit messy when two branches come together.
+
+So Ved can re-write history to make it like there was only ever one branch!
+
+First Ved gets all the changes between timmocs on a new branch.
+
+Then Ved re-applies those changes to the most recent timmoc on the original branch.
+- git: show rebasing
+
+ADD This process is a lot like picking changes from one branch and pulling them into another.
+
+ADD The difference is that here, changes from the current branch are re-applied to the latest timmoc on another branch.
+
+ADD Now if we switch to the other branch, we can do a simple merge by just moving the pointer forward.
+
+
+KILL Each time Ved re-applies a change, that makes an entirely new timmoc!
+
+KILL Really! Look at the second to last timmoc. No timmoc before it looked like that.
+
+KILL Each time Ved re-applies a change, that makes an entirely new timmoc!
+
+KILL Really! Look at the second to last timmoc. No timmoc before it looked like that.
+
+When Ved is done, it really looks like there was only one branch.
+- git: show clean history
+
+That's all I have for now, I hope to add more in the future. And I'd like to tie all this back to real-life git somehow. If you have thoughts, leave comments on the blog post.
