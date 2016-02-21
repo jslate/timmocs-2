@@ -1,3 +1,11 @@
 %img{ src: 'images/what_is_branch.svg' }
 
 = text 'Usually, HEAD is moved to the new branch as well, so Ved can make changes on that branch.'
+
+- content_for :code_container do
+  = cmd '[master]: git checkout sad'
+  %div Switched to branch 'sad'
+
+  = cmd '[sad]: git log --oneline --decorate'
+  = commit_line '141170e (HEAD -> sad, master) initial commit'
+

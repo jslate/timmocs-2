@@ -2,12 +2,13 @@
 
 = text 'This is a timmoc.'
 
-
-
-#code-container
+- content_for :code_container do
   = cmd '[master]: git log'
   = commit_line 'commit 141170e746501cdf2882b836791490361fe583fb'
   %div Author: Jonathan Slate &lt;jslate@patientslikeme.com&gt;
   %div Date:   Wed Feb 3 07:55:03 2016 -0500
-  
+
   initial commit
+
+
+

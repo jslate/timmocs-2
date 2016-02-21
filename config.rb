@@ -1,55 +1,14 @@
-PAGES = %w(
-  index
-  timmocs_are_not_people
-  timmocs_are_not_people_2
-  adamant
-  ved
-  generations
-  branch_pointers
-  branch_pointers_2
-  branch_pointers_head
-  branch_pointers_head_2
-  what_is_branch
-  what_is_branch_2
-  branch_moved_forward
-  branch
-  branch_2
-  branch_update_point
-  branch_update_point_2
-  branch_update_point_3
-  branch_update_point_4
-  merging
-  two_parents
-  individual
-  individual_2
-  conflict_question
-  ved_intervene
-  cherry_pick_pre
-  cherry_pick_pre_2
-  cherry_pick
-  note_applied
-  cherry_pick_skip
-  no_hair
-  rebase
-  rebase_2
-  rebase_diffs
-  more_rebase
-  more_rebase_2
-  more_rebase_3
-  rebase_re_apply
-  rebase_really
-  rebased
-  thats_all
-)
-
 helpers do
+  def get_pages
+    File.readlines('pages.txt').map(&:chomp)
+  end
   def current_index
-    PAGES.index(current_page.path.split('.').first)
+    get_pages.index(current_page.path.split('.').first)
   end
   def previous_page
     current_index.try do |i|
       if i > 0
-        content_tag :a, href: "#{PAGES[i-1]}.html", id: 'previous_link' do
+        content_tag :a, href: "#{get_pages[i-1]}.html", id: 'previous_link' do
           content_tag 'div', '&lt; previous', class: 'button'
         end
       end
@@ -57,7 +16,7 @@ helpers do
   end
   def next_page
     current_index.try do |i|
-      PAGES[i+1].try do |page|
+      get_pages[i+1].try do |page|
         content_tag :a, href: "#{page}.html", id: 'next_link' do
           content_tag 'div', 'next &gt;', class: 'button next'
         end

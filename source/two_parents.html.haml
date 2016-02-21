@@ -4,11 +4,11 @@
 
 
 
-#code-container
+- content_for :code_container do
   = cmd '[glasses]: git merge curly'
   %div Merge made by the 'recursive' strategy.
   %div ...
-  
+
   = cmd '[glasses]: git log --oneline --decorate'
   = commit_line '57244ed (HEAD -> glasses) Merge branch \'curly\' into glasses'
   = commit_line '2183ff9 added glasses'

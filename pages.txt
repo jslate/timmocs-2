@@ -22,6 +22,7 @@ branch_update_point_2
 branch_update_point_3
 branch_update_point_4
 branch_update_point_5
+simple_merge_complete
 merging
 two_parents
 individual

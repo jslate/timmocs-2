@@ -2,7 +2,7 @@
 
 = text "Timmocs aren't like people. Usually it only takes one timmoc to make a child timmoc."
 
-%pre#code-container
+- content_for :code_container do
   = cmd '[master]: git log  --oneline --decorate'
   = commit_line 'a46f7a4 (HEAD -> master) add nose'
   = commit_line '141170e initial commit'

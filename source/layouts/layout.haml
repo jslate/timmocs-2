@@ -4,13 +4,25 @@
   %title Timmocs 2
   %link{ href: 'stylesheets/normalize.css', rel: 'stylesheet', type: 'text/css'}
   %link{ href: 'stylesheets/all.css', rel: 'stylesheet', type: 'text/css'}
+  %script{ src: 'https://code.jquery.com/jquery-2.2.0.min.js' }
+
   %script{ src: 'javascripts/all.js' }
   %meta{ name: 'viewport', content: "width=device-width" }
 
 %body
-  .nav-container
-    .nav
-      = previous_page
-      = next_page
+  .align-container
+    .main-container
+      .nav-container
+        .nav
+          = previous_page
+          = next_page
 
-  = yield
+      = yield
+
+      - if content_for?(:code_container)
+        .code-outer-container
+          .icon-container
+            %a#git-icon{ href: '#' }
+              %img{ src: 'images/Git_icon.svg', style: 'width: 50px' }
+          #code-container
+            = yield_content :code_container

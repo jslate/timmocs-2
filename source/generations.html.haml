@@ -2,7 +2,7 @@
 
 = text 'Over many generations, Ved can decide to add and remove various features.'
 
-#code-container
+- content_for :code_container do
 
   = cmd '[master]: git log --oneline --decorate'
   = commit_line 'f0c4c4d (HEAD -> master) add mouth'

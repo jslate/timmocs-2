@@ -2,7 +2,7 @@
 
 = text 'As new timmocs are created on a branch, the pointer just moves forward.'
 
-#code-container
+- content_for :code_container do
   = cmd '[sad]: git log --oneline --decorate'
   = commit_line '9f7cad2 (HEAD -> sad) add sad mouth'
   = commit_line 'ff4d610 add nose'

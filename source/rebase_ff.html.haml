@@ -1,0 +1,14 @@
+%img{ src: 'images/rebase_ff.svg' }
+
+= text 'Now when we merge the hairy branch back into the original branch, the pointer just gets moved forward to the latest commit.'
+
+- content_for :code_container do
+  = cmd '[hair]: git checkout horns'
+  %div Switched to branch 'horns'
+
+  = cmd '[horns]: git merge hair'
+  %div Updating 7e15edf..b25d0ac
+  %div Fast-forward
+  barfoo.txt | 4 ++++
+  1 file changed, 4 insertions(+)
+  create mode 100644 barfoo.txt

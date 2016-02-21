@@ -3,15 +3,15 @@
 = text 'In the case above, Ved updates the original branch to point to the timmoc on the branch with the new features.'
 
 
-#code-container
+- content_for :code_container do
   = cmd '[happy]: git log --oneline --decorate'
   = commit_line 'b5deeb2 (HEAD -> happy) add mouth'
   = commit_line 'fb782c2 add nose'
   = commit_line '5597585 (master) initial commit'
-  
+
   = cmd '[happy]: git checkout master'
   %div Switched to branch 'master'
-  
+
   = cmd '[master]: git merge happy'
   %div Updating 5597585..b5deeb2
   %div Fast-forward
