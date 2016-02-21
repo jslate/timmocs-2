@@ -21,6 +21,9 @@ lines.each do |line|
     reset
   else
     begin
+
+      line.gsub!(/\w+\~\d+/) { |x| `git rev-parse #{x}`.chomp.slice(0...7) }
+
       branch = `git rev-parse --abbrev-ref HEAD`.chomp
       puts "[#{branch}]: #{line}".chomp
       `#{line}`.tap do |output|
