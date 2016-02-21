@@ -10,8 +10,12 @@ def reset
 end
 
 lines = File.readlines('timmocs-commands.sh').map(&:chomp)
-# puts lines
-Dir.chdir("../timmocs_commands")
+
+"/tmp/timmocs_commands".tap do |tmp_dir|
+  Dir.mkdir(tmp_dir) unless Dir.exists?(tmp_dir)
+  Dir.chdir(tmp_dir)
+end
+
 reset
 
 lines.each do |line|

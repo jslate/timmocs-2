@@ -105,10 +105,6 @@ git cherry-pick horns~0
 
 git log --oneline --decorate
 
-
-
-
-
 reset
 
 git branch hair
