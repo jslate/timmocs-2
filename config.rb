@@ -1,4 +1,11 @@
 helpers do
+
+  def cmds(&block)
+    content_for :code_container do
+      capture(&block).split(/\n/).map{|line|cmd_line(line)}.join
+    end
+  end
+
   def get_pages
     File.readlines('pages.txt').map(&:chomp)
   end
@@ -25,6 +32,20 @@ helpers do
   end
   def text(string)
     content_tag 'p', string.gsub(/(\S*)\s(\S*)\./, '\1&nbsp;\2.')
+  end
+
+  def cmd_line(string)
+    if %w(First, Switched Updating Fast-forward create).include? string.split(/\s+/).first
+      content_tag :div, string.gsub(/\A\!/, '') + '&nbsp;'
+    elsif string =~ /\d+\s/
+      content_tag :div, string.gsub(/\A\!/, '') + '&nbsp;'
+    elsif string =~ /\A\[/
+      cmd(string)
+    elsif string =~ /\A\!/
+      content_tag :div, string.gsub(/\A\!/, '') + '&nbsp;'
+    else
+      commit_line(string)
+    end
   end
 
   def cmd(string)
