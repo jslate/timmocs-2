@@ -2,21 +2,21 @@
 
 = text 'But the new timmocs have a different parent: the timmoc with horns, who did not exist when the hairy branch was first created.'
 
-- content_for :code_container do
-  = cmd '[hair]: git log --oneline --decorate'
-  = commit_line '5d798bc (HEAD -> hair) add beard'
-  = commit_line '8124b77 add hair'
-  = commit_line '80f2adf (master) initial commit'
+- cmds do
+  [hair]: git log --oneline --decorate
+  2e50b8a (HEAD -> hair) add beard
+  aebe1fb add hair
+  946d00b (master) initial commit
 
-  = cmd '[hair]: git rebase horns'
-  %div First, rewinding head to replay your work on top of it...
-  %div Applying: add hair
-  %div Applying: add beard
+  [hair]: git rebase horns
+  First, rewinding head to replay your work on top of it...
+  Applying: add hair
+  Applying: add beard
 
-  = cmd '[hair]: git log --oneline --decorate'
-  = commit_line 'b25d0ac (HEAD -> hair) add beard'
-  = commit_line '9165e40 add hair'
-  = commit_line '7e15edf (horns) add the other horn'
-  = commit_line '25c0260 add one horn'
-  = commit_line '80f2adf (master) initial commit'
+  [hair]: git log --oneline --decorate
+  1783d82 (HEAD -> hair) add beard
+  046b8ea add hair
+  bd00055 (horns) add the other horn
+  6347ad7 add one horn
+  946d00b (master) initial commit
 

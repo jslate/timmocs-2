@@ -2,15 +2,15 @@
 
 = text 'When two branches are merged, that means you have a timmoc with two parents.'
 
+- cmds do
+  [glasses]: git merge curly
+  Merge made by the 'recursive' strategy.
+  face.txt | 1 +
+  1 file changed, 1 insertion(+)
+  create mode 100644 face.txt
 
-
-- content_for :code_container do
-  = cmd '[glasses]: git merge curly'
-  %div Merge made by the 'recursive' strategy.
-  %div ...
-
-  = cmd '[glasses]: git log --oneline --decorate'
-  = commit_line '57244ed (HEAD -> glasses) Merge branch \'curly\' into glasses'
-  = commit_line '2183ff9 added glasses'
-  = commit_line '06ffc41 (curly) add curly'
-  = commit_line '86556c8 (master) initial commit'
+  [glasses]: git log --oneline --decorate
+  2e7787b (HEAD -> glasses) Merge branch 'curly' into glasses
+  c82b600 add glasses
+  8886eb9 (curly) add curl
+  3690d0a (master) initial commit

@@ -2,8 +2,9 @@
 
 = text 'When a new branch is created it just points to the commit HEAD points to.'
 
-- content_for :code_container do
-  = cmd '[master]: git branch sad'
+- cmds do
+  [master]: git branch sad
 
-  = cmd '[master]: git log --oneline --decorate'
-  = commit_line '141170e (HEAD -> master, sad) initial commit'
+  [master]: git log --oneline --decorate
+  c3d688c (HEAD -> master, sad) initial commit
+

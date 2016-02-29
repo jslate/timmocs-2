@@ -2,11 +2,11 @@
 
 = text 'There is also a special pointer called HEAD which points to the one of the branch pointers.'
 
-- content_for :code_container do
-  = cmd '[sad]: git checkout master'
-  %div Switched to branch 'master'
+- cmds do
+  [sad]: git checkout master
+  Switched to branch 'master'
 
-  = cmd '[master]: git log --oneline --decorate'
-  = commit_line 'f0c4c4d (HEAD -> master) add mouth'
-  = commit_line 'a46f7a4 add nose'
-  = commit_line '141170e initial commit'
+  [master]: git log master --oneline --decorate
+  72a4252 (HEAD -> master) add mouth
+  dd88178 add nose
+  616d22e initial commit

@@ -2,8 +2,8 @@
 
 = text 'As new timmocs are created on a branch, the pointer just moves forward.'
 
-- content_for :code_container do
-  = cmd '[sad]: git log --oneline --decorate'
-  = commit_line '9f7cad2 (HEAD -> sad) add sad mouth'
-  = commit_line 'ff4d610 add nose'
-  = commit_line '141170e initial commit'
+- cmds do
+  [sad]: git log sad --oneline --decorate
+  22675f3 (HEAD -> sad) add sad mouth
+  2edb9c5 add nose
+  19acc53 (master) initial commit

@@ -2,9 +2,9 @@
 
 = text 'Over many generations, Ved can decide to add and remove various features.'
 
-- content_for :code_container do
+- cmds do
+  [master]: git log --oneline --decorate
+  81cce6d (HEAD -> master) add mouth
+  09fb489 add nose
+  e6faaf8 initial commit
 
-  = cmd '[master]: git log --oneline --decorate'
-  = commit_line 'f0c4c4d (HEAD -> master) add mouth'
-  = commit_line 'a46f7a4 add nose'
-  = commit_line '141170e initial commit'

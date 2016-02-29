@@ -2,10 +2,9 @@
 
 = text 'Usually, HEAD is moved to the new branch as well, so Ved can make changes on that branch.'
 
-- content_for :code_container do
-  = cmd '[master]: git checkout sad'
-  %div Switched to branch 'sad'
+- cmds do
+  [master]: git checkout sad
+  Switched to branch 'sad'
 
-  = cmd '[sad]: git log --oneline --decorate'
-  = commit_line '141170e (HEAD -> sad, master) initial commit'
-
+  [sad]: git log --oneline --decorate
+  8f968cf (HEAD -> sad, master) initial commit

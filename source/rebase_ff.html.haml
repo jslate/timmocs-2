@@ -2,13 +2,13 @@
 
 = text 'Now when we merge the hairy branch back into the original branch, the pointer just gets moved forward to the latest commit.'
 
-- content_for :code_container do
-  = cmd '[hair]: git checkout horns'
-  %div Switched to branch 'horns'
+- cmds do
+  [hair]: git checkout horns
+  Switched to branch 'horns'
 
-  = cmd '[horns]: git merge hair'
-  %div Updating 7e15edf..b25d0ac
-  %div Fast-forward
-  barfoo.txt | 4 ++++
-  1 file changed, 4 insertions(+)
-  create mode 100644 barfoo.txt
+  [horns]: git merge hair
+  Updating bd00055..1783d82
+  Fast-forward
+  face_2.txt | 2 ++
+  1 file changed, 2 insertions(+)
+  create mode 100644 face_2.txt
