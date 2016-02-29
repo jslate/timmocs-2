@@ -3,10 +3,17 @@ require 'pry'
 def reset
   `rm -rf .git`
   `rm  *.txt`
-  `echo "foo" > foo.txt`
   `git init`
+  File.open('foo.txt', 'w'){|f|f.puts (0..9).to_a.join("\n")}
+
   `git add foo.txt`
   `git commit -m "initial commit"`
+end
+
+def big_line(line)
+  puts '#'*50
+  puts line
+  puts '#'*50
 end
 
 lines = File.readlines('timmocs-commands.sh').map(&:chomp)
@@ -19,10 +26,15 @@ end
 reset
 
 lines.each do |line|
-  if line == ''
+  if line == 'exit'
+    System.exit
+  elsif line == ''
     puts
+  elsif line =~ /\#/
+    big_line(line)
   elsif line == 'reset'
     reset
+    big_line('reset')
   else
     begin
 
